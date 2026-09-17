@@ -26,6 +26,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -187,8 +188,10 @@ fun OnboardingScreen(
 
                 // Start Journey Button
                 Button(
-                    onClick = { if (canSubmit) onNameEntered(nameInput) },
-                    enabled = canSubmit,
+                    onClick = { 
+                        val finalName = if (nameInput.isNotBlank()) nameInput.trim() else "همسفر آرامش"
+                        onNameEntered(finalName) 
+                    },
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(54.dp)
@@ -196,9 +199,7 @@ fun OnboardingScreen(
                     shape = RoundedCornerShape(18.dp),
                     colors = ButtonDefaults.buttonColors(
                         containerColor = ZenPurplePrimary,
-                        contentColor = Color.White,
-                        disabledContainerColor = Color(0xFF262040),
-                        disabledContentColor = Color(0xFF64748B)
+                        contentColor = Color.White
                     )
                 ) {
                     Icon(
@@ -208,9 +209,22 @@ fun OnboardingScreen(
                     )
                     Spacer(modifier = Modifier.size(8.dp))
                     Text(
-                        text = "آغاز مسیر آرامش با نونا ✨",
+                        text = if (nameInput.isNotBlank()) "آغاز مسیر آرامش با نونا ✨" else "ورود سریع به واحه آرامش ✨",
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(10.dp))
+
+                TextButton(
+                    onClick = { onNameEntered("همسفر آرامش") },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(
+                        text = "ورود به عنوان مهمان (بدون نام)",
+                        color = Color(0xFF94A3B8),
+                        fontSize = 13.sp
                     )
                 }
             }
