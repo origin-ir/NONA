@@ -54,9 +54,17 @@ jobs:
           name: Nona-Zen-App-Debug
           path: app/build/outputs/apk/debug/*.apk
 
-      - name: Create GitHub Release (On Tags)
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Create or Update GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: "v1.0-latest"
+          name: "Nona Zen App - Latest Build (APK)"
+          body: |
+            نسخه آزمایشی و نهایی اپلیکیشن نونا (nona)
+            - کاملاً آفلاین و بدون نیاز به سرور
+            - مأموریت‌های ۷ روزه ذهن‌آگاهی و کارت‌های آرامش
+            - آماده نصب روی اندروید
           files: app/build/outputs/apk/debug/*.apk
-          generate_release_notes: true
+          generate_release_notes: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
