@@ -84,6 +84,7 @@ fun BreathingSphereDialog(
     val triggerHaptic = remember {
         {
             try {
+                @Suppress("DEPRECATION")
                 val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
                 if (vibrator != null && vibrator.hasVibrator()) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
