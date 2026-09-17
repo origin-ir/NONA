@@ -78,6 +78,15 @@ class NonaRepository(
                     points = 35,
                     actionType = "TAP_CHECK",
                     cardRewardId = "card_floating_leaf"
+                ),
+                DailyTask(
+                    id = "task_cosmic_unity",
+                    titleFa = "پیوند با بیکران (روز هفتم)",
+                    descriptionFa = "مرور دستاوردهای هفته و ۳ دقیقه تعمق آرام برای تکمیل چرخه‌ی هفتگی ذهن‌آگاهی",
+                    categoryFa = "حکمت کیهانی 🌌",
+                    points = 60,
+                    actionType = "BREATHE",
+                    cardRewardId = "card_cosmic_star"
                 )
             )
             taskDao.insertTasks(initialTasks)
