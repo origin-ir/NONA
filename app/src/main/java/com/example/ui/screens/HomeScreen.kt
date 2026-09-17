@@ -356,19 +356,27 @@ fun HomeScreen(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(
-                        text = "مأموریت‌های آرامش امروز",
-                        color = TextPrimary,
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Black
-                    )
+                    Column {
+                        Text(
+                            text = "مسیر آرامش و ذهن‌آگاهی ۷ روزه",
+                            color = TextPrimary,
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Black
+                        )
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(
+                            text = "مأموریت‌های آفلاین برای صلح درون و آزادسازی کارت‌ها",
+                            color = TextMuted,
+                            fontSize = 11.sp
+                        )
+                    }
 
                     Surface(
                         color = if (completedCount == tasks.size && tasks.isNotEmpty()) ZenEmerald.copy(alpha = 0.2f) else CosmicSurfaceElevated,
                         shape = RoundedCornerShape(10.dp)
                     ) {
                         Text(
-                            text = "$completedCount از ${tasks.size} انجام شد",
+                            text = "$completedCount از ${tasks.size} تمرین",
                             color = if (completedCount == tasks.size && tasks.isNotEmpty()) ZenEmerald else ZenTeal,
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
