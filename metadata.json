@@ -1,0 +1,7 @@
+{
+  "name": "nona",
+  "description": "Daily mindful micro-tasks, serenity points, and magical collectible cards for inner peace",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
