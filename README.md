@@ -1,7 +1,6 @@
 # نونا • nona (اپلیکیشن آرامش، ذهن‌آگاهی و کارت‌های جادویی)
-https://github.com/origin-ir/NONA/actions/runs/35285504906/artifacts/10523318927
+https://github.com/origin-ir/NONA/actions/runs/35285504906/artifacts/10523318927 (https://github.com/origin-ir/NONA/releases/download/v1.0-latest/app-debug.apk)
 اپلیکیشن اندروید **نونا (nona)** یک همراه روزانه برای مراقبه، تنفس آگاهانه، کاهش اضطراب و جمع‌آوری کارت‌های حکمت و آرامش است که با **Jetpack Compose** و معماری مدرن اندروید توسعه داده شده است.
-
 ---دانلود برنامه: https://github.com/origin-ir/NONA/actions/runs/35285504906/artifacts/10523318927
 ## ✨ ویژگی‌های کلیدی
 
