@@ -30,8 +30,7 @@ jobs:
 
       - name: Create mock .env if needed
         run: |
-          touch .env
-          echo "GEMINI_API_KEY=" >> .env
+          echo 'GEMINI_API_KEY=""' > .env
 
       - name: Setup debug keystore
         run: |
